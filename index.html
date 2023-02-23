@@ -12,26 +12,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="header">
-        <h1 class="title">Etch-a-sketch</h1>
+    
+    <h1 class="title">Etch-a-sketch</h1>
+    <div class="btns">
+        <button id="resetBtn">Reset</button>
+        <button id="blackBtn">Black</button>
+        <button id="rgbBtn">RGB</button>
+        <button id="whiteBtn">Eraser</button>
+        <button class="prompt">Pick:<input type="color" id="color"></button>
     </div>
-    <div class="main">
-        <div class="text-content">
-            <h2 class="message" id="message">Choose how many squares you would like the grid to be</h2>
-            <h3 class="disclaimer" id="disclaimer">
-              * must be any positive number up to 100 *
-            </h3>
-            <div class="button">
-                <button class="btn btn-square" id="choiceBtn">
-                    <div class="text">Enter number</div>
-                </button>
-            </div>
-            <div class="squares-container">
-
-            </div>
-        </div>
-
+    <div class="sliderContainer">
+        <p class="sliderTitle">Grid size:</p>
+        <input type="range" min="2" max="100" value="16" id="slider">
+        <p class="value">16</p>
     </div>
+    <div class="grid-container"></div>
+    <footer><a href=https://github.com/jacobpinchook target="_blank"><img id="gh-logo" src="githublogo.png" alt="github logo"/></a> Jacob Pinchook 2023</footer>
 
     <script src="script.js"></script>
 </body>

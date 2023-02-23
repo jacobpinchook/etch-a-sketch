@@ -1,60 +1,170 @@
-.header {
-    display: flex;
-    justify-content: center;
-}
-
-.title {
-    margin-top: 30px;
-    font-size: 60px;
+* {
     font-family: 'Cabin Sketch', sans-serif;
 }
 
-/* MAIN */
-
-.main {
-    text-align: center;
-}
-
-.text-content {
-    margin-bottom: 20px;
-    line-height: 10px;
-}
-
-.message {
-    font-size: 28px;
-}    
-
-.disclaimer {
-    font-size: 20px;
-    margin-bottom: 20px;
-    font-style: italic;
-}    
-
-.button {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.btn {
-    margin-top: 40px;
-} 
-
-.btn-square {
-    width: 160px;
-    height: 40px;
-}
-
-.text {
-    font-size: 20px;
-}
-
-.squares-container {
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 400px;
-    height: 400px;
-    border: peachpuff solid 1px;
-    margin: 0 auto;
+    flex-direction: column;
+    background-color: rgb(240, 241, 77);
+}
+
+/* HEADER */
+
+.title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 60px;
+    text-shadow: 4px 3px 0px white;
+}
+
+/* MAIN CONTENT */
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    width: 100px;
+    height: 55px;
+    border: 3px solid black;
+    border-radius: 6px;
+    box-shadow: 5px 5px black;
+    background-color: white;
+    font-size: 20px;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+button:active{
+    transform: scale(1.2);
+    border-color: #ddd;
+}
+
+#rgbBtn {
+    animation: rainbowButtonBackground 10s ease infinite;
+}
+
+@keyframes rainbowButtonBackground {
+    0% {
+        background-color: #ff6262;
+    }
+    20% {
+        background-color: #ffef62;
+    }
+    40% {
+        background-color: #7cff62;
+    }
+    60% {
+        background-color: #62ffe5;
+    }
+    80% {
+        background-color: #6272ff;
+    }
+    100% {
+        background-color: #ff62ff;
+    }
+}
+
+#whiteBtn {
+    animation: eraseButtonBackground 4s ease infinite;
+}
+
+@keyframes eraseButtonBackground {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 100%;
+        color: black;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+.prompt {
+    font-size: 17px;
+}
+
+.sliderContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+    margin-bottom: -20px;
+    margin-top: -10px;
+    gap: 10px;
+}
+
+#slider{
+    -webkit-appearance: none;
+    background: black;
+    outline: none;
+    border-radius: 50px;
+}
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    width: 25px; 
+    height: 25px; 
+    background: white; 
+    border-radius: 50px;
+}
+
+#slider::-moz-range-thumb{
+    width: 25px; 
+    height: 25px; 
+    background: white; 
+    border-radius: 50px;
+}
+
+.sliderTitle {
+    font-size: 30px;
+    text-shadow: 2px 2px white;
+}
+
+.value{
+    width: 50px;
+    font-size: 30px;
+    text-shadow: 2px 2px white;
+}
+
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: repeat(16, 2fr);
+    grid-template-rows: repeat(16, 2fr);
+    width: 600px;
+    height: 600px;
+    background-color: white;
+    border: 3px solid #ddd;
+    box-shadow: 10px 10px black;
+}
+
+.grid-item {
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+/* FOOTER */
+
+footer {
+    font-size: 25px;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+#gh-logo {
+    width: 35px;
+    height: 35px;
+    margin-bottom: -9px;
 }
